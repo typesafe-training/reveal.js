@@ -1,0 +1,98 @@
+/**
+ * Typesafe training theme for reveal.js.
+ * Author: Heiko Seeberger
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'League Gothic';
+	src: url('../../lib/font/league_gothic-webfont.eot');
+	src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../../lib/font/league_gothic-webfont.woff') format('woff'),
+		 url('../../lib/font/league_gothic-webfont.ttf') format('truetype'),
+		 url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Typesafe colors
+$typesafeBlue:      #7bdcf5;
+$typesafeDarkBlue:  #103a51;
+$typesafeLightBlue: #e6faff;
+$typesafeRed:       #ee6768;
+$typesafeGray:      #627886;
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: $typesafeGray;
+$headingColor: $typesafeDarkBlue;
+$headingTextShadow: none;
+$backgroundColor: #fff;
+$linkColor: $typesafeDarkBlue;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionColor: $typesafeLightBlue;
+$selectionBackgroundColor: $typesafeRed;
+$headingTextTransform: none;
+
+// Background generator
+// @mixin bodyBackground() {
+// 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
+// }
+
+
+.reveal pre {
+  margin: 20px auto;
+  font-size: 24px;
+}
+
+.reveal section[data-background] {
+  h1, h2, h3 {
+    color: white;
+    text-shadow: 2px 2px 0 rgba(0,0,0,.3);
+  }
+  h4, h5, h6, p, div, ul {
+    color: white;
+  }
+}
+
+.reveal .backgrounds:after {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  content: url("../../img/typesafe-logo.png");
+}
+
+.reveal .footnote {
+  margin-top: 1em;
+}
+
+.reveal img {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.reveal section > ul > li {
+  margin-bottom: 10px;
+}
+
+.h2Uppercase .reveal h2 {
+  text-transform: uppercase;
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
