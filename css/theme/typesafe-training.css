@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /**
- * Beige theme for reveal.js.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ * Typesafe training theme for reveal.js.
+ * Author: Heiko Seeberger
  */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 @font-face {
   font-family: 'League Gothic';
   src: url("../../lib/font/league_gothic-webfont.eot");
@@ -11,29 +11,64 @@
   font-weight: normal;
   font-style: normal; }
 
+.reveal pre {
+  margin: 20px auto; }
+
+.reveal pre code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 24px;
+  line-height: 1.2em; }
+
+.reveal section[data-background] h1, .reveal section[data-background] h2, .reveal section[data-background] h3 {
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3); }
+.reveal section[data-background] h4, .reveal section[data-background] h5, .reveal section[data-background] h6, .reveal section[data-background] p, .reveal section[data-background] div, .reveal section[data-background] ul {
+  color: white; }
+
+.reveal .backgrounds:after {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  content: url("../../images/typesafe-logo.png"); }
+
+.reveal .footnote {
+  margin-top: 1em; }
+
+.reveal img {
+  border: none !important;
+  box-shadow: none !important; }
+
+.reveal section > ul > li {
+  margin-bottom: 10px; }
+
+.h2Uppercase .reveal h2 {
+  text-transform: uppercase; }
+
+.reveal img.koan {
+  float: right;
+  background: none; }
+
+.reveal a:not(.image).agendaItem {
+  color: #103a51; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #f7f2d3;
-  background: -moz-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #f7f2d3));
-  background: -webkit-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -o-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: -ms-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background: radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
-  background-color: #f7f3de; }
+  background: white;
+  background-color: white; }
 
 .reveal {
-  font-family: "Lato", sans-serif;
-  font-size: 36px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
   font-weight: normal;
   letter-spacing: -0.02em;
-  color: #333333; }
+  color: #103a51; }
 
 ::selection {
   color: white;
-  background: rgba(79, 64, 28, 0.99);
+  background: #627886;
   text-shadow: none; }
 
 /*********************************************
@@ -46,21 +81,21 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #333333;
+  color: #103a51;
   font-family: "League Gothic", Impact, sans-serif;
   line-height: 0.9em;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
+  text-transform: none;
   text-shadow: none; }
 
 .reveal h1 {
-  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #8b743d;
+  color: #19aacf;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -69,13 +104,13 @@ body {
   transition: color .15s ease; }
 
 .reveal a:not(.image):hover {
-  color: #c0a86e;
+  color: #62d0ec;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #564826; }
+  background: #11728b; }
 
 /*********************************************
  * IMAGES
@@ -83,7 +118,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #333333;
+  border: 4px solid #103a51;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .2s linear;
   -moz-transition: all .2s linear;
@@ -93,7 +128,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #8b743d;
+  border-color: #19aacf;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -101,31 +136,31 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #8b743d; }
+  border-right-color: #19aacf; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #8b743d; }
+  border-left-color: #19aacf; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #8b743d; }
+  border-bottom-color: #19aacf; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #8b743d; }
+  border-top-color: #19aacf; }
 
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #c0a86e; }
+  border-right-color: #62d0ec; }
 
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #c0a86e; }
+  border-left-color: #62d0ec; }
 
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #c0a86e; }
+  border-bottom-color: #62d0ec; }
 
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #c0a86e; }
+  border-top-color: #62d0ec; }
 
 /*********************************************
  * PROGRESS BAR
@@ -134,7 +169,7 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #8b743d;
+  background: #19aacf;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -145,4 +180,4 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #8b743d; }
+  color: #19aacf; }
