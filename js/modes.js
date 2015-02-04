@@ -9,7 +9,7 @@ var Modes = (function(){
       url = window.location.href;
   
   if(window.location.search.match(/(\?|\&)master/gi) || window.location.search.match(/(\?|\&)notes/gi)) {
-    secretKey = '14224570091913620430';
+    secretKey = '14230621003492058662';
     masterJs = 'plugin/multiplex/master.js';
     clientJs = 'plugin/multiplex/client.js';
   }
