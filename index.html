@@ -40,8 +40,8 @@
 <!-- BEGIN
 <!-- ########################################################################################### -->
 
-
-<section data-markdown data-background="#103a51" data-state="h2Uppercase"><script type="text/template">
+<!-- trainivator-slide-begin -->
+<section id="todo" class="content" data-markdown data-background="#103a51" data-state="h2Uppercase"><script type="text/template">
 ## TODO
 </script></section>
 
@@ -54,6 +54,7 @@
 </div>
 </div>
 
+<script src="js/i18n.js"></script>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.min.js"></script>
 <script src="js/modes.js" type="text/javascript"></script>
@@ -69,7 +70,7 @@
     maxScale: 2.0,
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
 
     multiplex: {
       // Example values. To generate your own, see the socket.io server instructions.

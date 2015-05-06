@@ -179,3 +179,28 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #19aacf; }
+
+ /*********************************************
+ * TRANSLATION
+ *********************************************/ 
+ .lang-nav-bar {
+  position: absolute;
+  z-index: 99999999999;
+  left: 0;
+  right: 0;
+  bottom: 45px;
+  text-align: center;
+ }
+ .lang-nav-text {
+   color: #19aacf;
+   font-size: 0.5em !important;
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+ }
+ .lang-nav-text.active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+ }
