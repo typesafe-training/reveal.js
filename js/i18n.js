@@ -44,7 +44,6 @@ function createLangLinks(langs, parentDoc) {
 }
 
 function displayLangNavBar(doc) {
-  console.log("asdsd")
   doc.className += ' active';
   setTimeout(function() { doc.className = doc.className.replace(/\b active\b/,''); }, 5000);
 }

@@ -16,13 +16,11 @@
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
-  if( window.location.search.match( /print-pdf/gi ) ) {
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'css/print/pdf.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  }
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
 </script>
 
 <!--[if lt IE 9]>
@@ -71,7 +69,7 @@
     maxScale: 2.0,
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-    transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+    transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
 
     multiplex: {
       // Example values. To generate your own, see the socket.io server instructions.

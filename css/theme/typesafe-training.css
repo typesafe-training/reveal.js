@@ -1,21 +1,41 @@
 /**
  * Typesafe training theme for reveal.js.
- * Author: Heiko Seeberger
+ * Author: Markus Jura
  */
 @font-face {
   font-family: 'League Gothic';
   src: url("../../lib/font/league_gothic-webfont.eot");
   src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal; }  
 
 .reveal pre {
-  margin: 20px auto; }
+  margin: 20px auto; 
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 15px auto;
+  text-align: left;
+  font-size: .55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0 0 6px rgba(0,0,0,.3);
+}
 
 .reveal pre code {
   font-family: 'Source Code Pro', monospace;
   font-size: 24px;
-  line-height: 1.2em; }
+  line-height: 1.2em; 
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal section {
+  line-height: 1.2em;
+}  
 
 .reveal section[data-background] h1, .reveal section[data-background] h2, .reveal section[data-background] h3 {
   color: white;
@@ -28,17 +48,40 @@
   bottom: 20px;
   left: 20px;
   margin: 0;
-  content: url("../../images/typesafe-logo.png"); }
+  content: url("../../images/typesafe-logo.png"); 
+}
+
+@media (max-width: 1024px) {
+  .reveal .backgrounds:after {
+    content: ""; 
+  }
+}
 
 .reveal .footnote {
   margin-top: 1em; }
 
 .reveal img {
   border: none !important;
-  box-shadow: none !important; }
+  box-shadow: none !important; 
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal section > ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal section > ul ul {
+  list-style-type: square;
+  display: block;
+  margin-left: 40px;
+}  
 
 .reveal section > ul > li {
-  margin-bottom: 10px; }
+  margin-bottom: 10px; 
+}
 
 .h2Uppercase .reveal h2 {
   text-transform: uppercase; }
@@ -88,6 +131,10 @@ body {
 
 .reveal h1 {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+
+.reveal h2 {
+  font-size: 2.11em;
+}  
 
 /*********************************************
  * LINKS
@@ -204,3 +251,12 @@ body {
   opacity: 1;
   transition-delay: 0s;
  }
+
+ @media (max-width: 1024px) {
+  .lang-nav-bar {
+    bottom: 25px;    
+  }  
+  .lang-nav-text {
+    font-size: 0.3em !important; 
+  }
+}
