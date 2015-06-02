@@ -107,6 +107,14 @@ body {
   letter-spacing: -0.02em;
   color: #103a51; }
 
+.reveal em {
+  font-style: italic;  
+}  
+
+.reveal code {
+  font-family: monospace;
+}
+
 ::selection {
   color: white;
   background: #627886;
