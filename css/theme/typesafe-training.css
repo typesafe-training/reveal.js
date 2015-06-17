@@ -138,11 +138,17 @@ body {
   text-shadow: none; }
 
 .reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+  font-size: 3.5em;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); 
+}
 
 .reveal h2 {
   font-size: 2.11em;
 }  
+
+.reveal h3 {
+  font-size: 1.5em;
+}
 
 /*********************************************
  * LINKS
@@ -234,6 +240,26 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #19aacf; }
+
+/*********************************************
+ * TEXT
+ *********************************************/   
+ .reveal small {
+  display: inline-block;
+  font-size: 0.6em !important;
+  line-height: 1.2em;
+  vertical-align: top;
+ }
+
+ .reveal blockquote {
+   display: block;
+   position: relative;
+   width: 70%;
+   margin: 5px auto;
+   padding: 5px;
+   font-style: italic;
+   box-shadow: 0 0 2px rgba(0,0,0,.2);
+ }
 
  /*********************************************
  * TRANSLATION
