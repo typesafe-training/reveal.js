@@ -120,6 +120,10 @@ body {
   background: #627886;
   text-shadow: none; }
 
+.reveal strong {
+  font-weight: bold;
+}  
+
 /*********************************************
  * HEADERS
  *********************************************/
