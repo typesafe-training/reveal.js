@@ -67,6 +67,7 @@
     history: true,
     center: true,
     maxScale: 2.0,
+    previewLinks: true,
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
     transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
@@ -92,6 +93,10 @@
       { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
     ]
   });
+
+  Reveal.configure({
+      slideNumber: 'c / t'
+    });
 </script>
 
 </body>
